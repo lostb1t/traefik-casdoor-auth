@@ -1,8 +1,8 @@
 # traefik-casdoor-auth
 
-Webhook image for treafik casedoor auth plugin
+Optmized webhook image for the treafik casedoor auth plugin
 
-either mount the plugin config to /data/plugin.conf or set it with env variable
+Either mount the plugin config to /data/plugin.conf or set it with env variable
 
 ```
 CASDOOR_ENDPOINT
@@ -12,3 +12,5 @@ CASDOOR_ORGANIZATION
 CASDOOR_APPLICATION
 PLUGIN_ENDPOINT
 ```
+
+Image can be found at `ghcr.io/lostb1t/traefik-casdoor-auth:latest`
