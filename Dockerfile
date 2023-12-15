@@ -7,6 +7,8 @@ RUN git clone https://github.com/casdoor/traefik-casdoor-auth.git
 FROM golang:alpine
 COPY --from=build /src/traefik-casdoor-auth /src/traefik-casdoor-auth
 
+RUN echo "{\"casdoorEndpoint\": \"$CASDOOR_ENDPOINT\", \"casdoorClientId\": \"$CASDOOR_ClIENT_ID\", \"casdoorClientSecret\": \"$CASDOOR_CLIENT_SECRET\", \"casdoorOrganization\": \"$CASDOOR_ORGANIZATION\"}" > /config/plugin.json
+
 WORKDIR /src/traefik-casdoor-auth
 
 CMD go run cmd/webhook/main.go -configFile="/config/plugin.json"
