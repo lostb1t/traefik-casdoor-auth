@@ -21,13 +21,13 @@ services:
   ldap:
     image: ghcr.io/lostb1t/traefik-casdoor-auth:latest`
     ports:
-        - 9999:9999
+      - 9999:9999
     restart: unless-stopped
     environment:
-      CASDOOR_ENDPOINT: ""
-      CASDOOR_ClIENT_ID
-      CASDOOR_CLIENT_SECRET
-      CASDOOR_ORGANIZATION
-      CASDOOR_APPLICATION
-      PLUGIN_ENDPOINT
+      CASDOOR_ENDPOINT: ''
+      CASDOOR_ClIENT_ID: ''
+      CASDOOR_CLIENT_SECRET: ''
+      CASDOOR_ORGANIZATION: ''
+      CASDOOR_APPLICATION: ''
+      PLUGIN_ENDPOINT: ''
 ```
