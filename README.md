@@ -18,7 +18,7 @@ Compose example:
 ```
 version: '3'
 services:
-  ldap:
+  webhook:
     image: ghcr.io/lostb1t/traefik-casdoor-auth:latest
     ports:
       - 9999:9999
